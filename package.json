@@ -11,9 +11,6 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
-    "@nuxtjs/pwa": "^3.3.5",
-    "@nuxtjs/sitemap": "^2.4.0",
-    "@tinymce/tinymce-vue": "^3.2.8",
     "core-js": "^3.11.0",
     "dotenv": "^8.2.0",
     "fastify": "^3.15.0",
