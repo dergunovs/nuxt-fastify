@@ -26,7 +26,7 @@ npm install
 - DATABASE: название базы MongoDB, с которой будет работать приложение
 - USER: имя пользователя для авторизации
 - PASSWORD: пароль для авторизации
-- SECRET: секретное слово для генерации cookie в сессиях
+- SECRET: секретное слово для генерации cookie в сессиях (от 32 символов)
 - SECURE_COOKIE: включение безопасных cookie (требуется https протокол)
 - LOG: включаем/отключаем вывод лога Fastify
 
@@ -38,7 +38,7 @@ PORT=3000
 DATABASE=test
 USER=1
 PASSWORD=2
-SECRET=rehg08fdh08enyeyhneJG34534534
+SECRET=rehg08fdh08enyeyhneJG34534534hrt0tyh
 SECURE_COOKIE=false
 LOG=true
 ```
@@ -51,7 +51,7 @@ PORT=3000
 DATABASE=test
 USER=username
 PASSWORD=eherthb0uhg
-SECRET=775hgun5gh54ghu5gu9her9hger
+SECRET=775hgun5gh54ghu5gu9her9hgerhr9h7r9h7
 SECURE_COOKIE=true
 LOG=true
 ```
