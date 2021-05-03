@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  font-family: "Tahoma";
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 16px;
+}
+
+button {
+  padding: 8px;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin-right: 8px;
+}
+
+.form {
+  width: 600px;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0;
+}
+
+.form-element input,
+.form-element textarea {
+  margin-top: 4px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
