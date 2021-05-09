@@ -23,7 +23,7 @@ export default {
     // Запускаем процесс логаута с обновлением значения в сторе и редиректом на главную страницу.
     async logout() {
       try {
-        await this.$axios.post("/api/auth/logout");
+        await this.$axios.delete("/api/auth/logout");
         await this.$store.dispatch("checkAuth");
         this.$router.push("/");
       } catch (err) {

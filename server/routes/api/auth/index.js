@@ -18,10 +18,10 @@ module.exports = async function (fastify, opts) {
   });
 
   // Уничтожение сессии при логауте.
-  fastify.post("/logout", (request, reply) => {
+  fastify.delete("/logout", (request, reply) => {
     request.destroySession((err) => {
       if (err) {
-        reply.code(500).send({ message: "Сессии не существует" });
+        reply.code(200).send({ message: "Сессии не существует" });
       } else {
         reply.code(200).clearCookie("sessionId").send();
       }
