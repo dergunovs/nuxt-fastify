@@ -50,9 +50,6 @@ module.exports = {
   build: {
     // Просим стили вырезать в отдельные файлы. Иначе css будет inline.
     extractCSS: true,
-    babel: {
-      plugins: [["@babel/plugin-proposal-private-methods", { loose: true }]],
-    },
   },
 
   render: {

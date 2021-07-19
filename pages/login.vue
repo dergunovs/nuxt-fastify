@@ -2,13 +2,9 @@
   <main>
     <h1>Авторизация</h1>
     <div class="form">
-      <div class="form-element">
-        <label for="user">Пользатель</label>
-        <input type="text" v-model="user" id="user" />
-      </div>
-      <div class="form-element">
-        <label for="password">Пароль</label>
-        <input type="password" v-model="password" id="password" />
+      <div v-for="element in form" :key="element.name" class="form-element">
+        <label :for="element.name">{{ element.label }}</label>
+        <input type="text" v-model="loginData[element.name]" :id="element.name" />
       </div>
 
       <button @click="login">Войти</button>
@@ -22,22 +18,19 @@
 export default {
   data() {
     return {
-      user: "",
-      password: "",
+      loginData: {},
       loginError: "",
+      form: [
+        { name: "user", label: "Пользатель" },
+        { name: "password", label: "Пароль" },
+      ],
     };
   },
   methods: {
     async login() {
       try {
-        // Берём данные из полей формы.
-        let formData = {
-          user: this.user,
-          password: this.password,
-        };
-
-        // Отправляем их на проверку.
-        await this.$axios.post("/api/auth/login", formData);
+        // Отправляем данные формы на проверку.
+        await this.$axios.post("/api/auth/login", this.loginData);
 
         // При успешной проверке записываем в стор isAuth = true.
         await this.$store.dispatch("checkAuth");
